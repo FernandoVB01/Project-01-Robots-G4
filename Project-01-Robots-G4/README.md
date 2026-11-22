@@ -1,42 +1,111 @@
-# Project-01-Robots-G4: Robot Móvil Ackermann (Dodge Challenger)
+# Ackermann Challenger · Grupo 4
 
-Diseño CAD en **Autodesk Fusion 360**, exportación **URDF/Xacro**, simulación en **Gazebo** y controlador de trayectoria en **ROS 2**.
+Robot móvil basado en el diseño del grupo en Autodesk Fusion 360. El modelo URDF/Xacro se importa a Gazebo Harmonic y un nodo ROS 2 Jazzy lo guía por una vuelta en ocho de 15,29 m mediante Pure Pursuit.
 
-## Estructura del Repositorio
+## Compilar y ejecutar
 
-- `ackermann_challenger_description/`: Modelo URDF/Xacro, mallas `.stl` y archivos de lanzamiento para visualización y simulación.
-- `ackermann_challenger_control/`: Controlador Ackermann, generador de trayectoria, mundos de Gazebo y configuración (`ros2_control`).
-- `cad/`: Archivo fuente de Fusion 360 (`.f3d`), planos acotados en PDF y capturas/renders del robot.
-- `docs/`: Documento técnico en formato IEEE y presentación del proyecto.
-
-## Parámetros de Diseño (Escala 1:10)
-
-| Parámetro | Valor |
-| :--- | :---: |
-| Distancia entre ejes (*Wheelbase*, $L$) | `0.300 m` (`300 mm`) |
-| Ancho de vía (*Track Width*, $W$) | `0.190 m` (`190 mm`) |
-| Separación entre pivotes (*Kingpin Width*, $W_s$) | `0.120 m` (`120 mm`) |
-| Radio de rueda ($R_w$) | `0.035 m` ($\varnothing 70\text{ mm}$) |
-| Ángulo máximo de dirección ($\delta_{\max}$) | $\pm 35^\circ$ (`±0.611 rad`) |
-
-## Dependencias y Requisitos
-
-- **ROS 2:** Humble / Jazzy
-- **Simulador:** Gazebo
-- **Paquetes requeridos:** *(completar con los paquetes exactos usados por el controlador, ej. `ros2_control`, `ros2_controllers`, `xacro`, `robot_state_publisher`, `ros_gz_sim` / `gazebo_ros_pkgs`)*
-
-## Compilación y Ejecución
+Entorno objetivo: **Ubuntu 24.04 LTS, ROS 2 Jazzy y Gazebo Harmonic**. Si estás en Ubuntu 26.04, ejecuta estas instrucciones en una máquina virtual Ubuntu 24.04 para disponer de Jazzy y de la ventana de Gazebo. Configura primero el repositorio APT de ROS con la [guía oficial de Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html).
 
 ```bash
-# Clonar dentro del workspace de ROS 2
-cd ~/ros2_ws/src
-git clone https://github.com/FernandoVB01/Project-01-Robots-G4.git
-
-# Compilar
-cd ~/ros2_ws
-colcon build --symlink-install
-source install/setup.bash
-
-# Ejecutar simulación y trayectoria
-# ros2 launch ackermann_challenger_control <nombre_launch>.launch.py
+sudo apt update
+sudo apt install -y git make python3-colcon-common-extensions ros-jazzy-ros-base \
+  ros-jazzy-ros-gz-sim ros-jazzy-ros-gz-bridge ros-jazzy-xacro
 ```
+
+Para la visualización opcional en RViz, instala también `ros-jazzy-rviz2` y `ros-jazzy-joint-state-publisher-gui`. Para hacer gráficas, instala `python3-matplotlib`.
+
+Si ya tienes la copia entregada, abre una terminal en esta carpeta, donde están este README y los dos paquetes. Cuando la revisión esté disponible en GitHub, la estructura del repositorio se clona así.
+
+```bash
+git clone https://github.com/FernandoVB01/Project-01-Robots-G4.git
+cd Project-01-Robots-G4/Project-01-Robots-G4
+```
+
+Ejecuta desde esa carpeta.
+
+```bash
+source /opt/ros/jazzy/setup.bash
+colcon build --symlink-install --packages-select \
+  ackermann_challenger_description ackermann_challenger_control
+source install/setup.bash
+ros2 launch ackermann_challenger_control trajectory.launch.py
+```
+
+Gazebo abre el escenario con la línea de referencia. El controlador espera la pose del simulador, deja 2 s de margen para el arranque y comienza a avanzar. Cuando imprime `completed`, detiene el robot. Los archivos se guardan en `resultados/tracking.csv` y `resultados/summary.json`. Cierra Gazebo o pulsa `Ctrl+C` antes de iniciar otra corrida.
+
+### Variantes
+
+```bash
+# Corrida sin interfaz
+ros2 launch ackermann_challenger_control trajectory.launch.py gui:=false output_dir:=resultados/headless
+
+# Modo gráfico con una espera de 8 s para empezar a grabar
+ros2 launch ackermann_challenger_control trajectory.launch.py start_delay:=8.0 output_dir:=resultados/video
+
+# Mostrar el robot sin iniciar la trayectoria
+ros2 launch ackermann_challenger_description gazebo.launch.py
+
+# Inspección de articulaciones y modelo en RViz, con los paquetes opcionales instalados
+ros2 launch ackermann_challenger_description display.launch.py
+
+# Rehacer las gráficas tras terminar la corrida
+python3 tools/plot_results.py resultados/headless resultados/headless/figuras
+```
+
+| Argumento | Valor inicial | Función |
+|---|---:|---|
+| `gui` | `true` | Ventana de Gazebo |
+| `drive` | `true` | Iniciar el seguidor |
+| `speed` | `0.55` | Velocidad nominal en m/s |
+| `lookahead` | `0.32` | Distancia de anticipación en m |
+| `start_delay` | `2.0` | Espera en segundos de simulación tras recibir la pose |
+| `output_dir` | `resultados` | Carpeta de telemetría |
+
+Usa carpetas de salida distintas si quieres comparar corridas. Una corrida nueva reutiliza los nombres de archivo en la carpeta indicada.
+
+Si la ventana de Gazebo tarda en dibujar el escenario, puedes separar la apertura de la ventana y el inicio del controlador. Primero ejecuta `ros2 launch ackermann_challenger_control trajectory.launch.py drive:=false`. Cuando se vea el ocho, abre otra terminal en la misma carpeta, carga los dos `setup.bash` y ejecuta lo siguiente.
+
+```bash
+ros2 run ackermann_challenger_control trajectory_tracker --ros-args \
+  -p use_sim_time:=true -p output_dir:=resultados/video
+```
+
+### Diagnóstico
+
+En una segunda terminal, carga los dos archivos `setup.bash` antes de ejecutar los comandos ROS 2.
+
+```bash
+ros2 topic echo /clock --once
+ros2 topic echo /challenger/ground_truth --once
+ros2 topic echo /challenger/cmd_vel --once
+```
+
+Si falta `/clock`, confirma que Gazebo esté ejecutándose sin pausa. Si no aparece `/challenger/ground_truth`, revisa el mensaje de inserción de `challenger` y los mensajes del puente `ros_gz_bridge`. El nodo registra `off_course` o `timeout` si activa la detención por desvío o tiempo.
+
+## Diseño y funcionamiento
+
+| Parámetro | Valor |
+|---|---:|
+| Distancia entre ejes | 300 mm |
+| Separación de centros de rodadura | 190 mm |
+| Separación de juntas de giro de rueda | 208 mm |
+| Separación de pivotes delanteros | 120 mm |
+| Diámetro y ancho de rueda | 70 mm y 26 mm |
+| Recorrido de cada mangueta | ±35° |
+| Curvatura máxima de la referencia | 1,616 m⁻¹ |
+| Curvatura máxima comandada | 1,8 m⁻¹ |
+
+Las mallas de Fusion conservan su geometría original. Los centros de los neumáticos están desplazados 9 mm hacia dentro con respecto a las juntas de giro. Las ruedas usan colisiones cilíndricas y el chasis una caja central. El paquete de descripción instala el escenario, el modelo y el puente de Gazebo.
+
+El seguidor proyecta la pose del punto medio del eje trasero sobre una ventana local de la referencia. Busca un objetivo adelantado, calcula la curvatura y publica la velocidad lineal y angular. El sistema Ackermann de Gazebo ajusta las manguetas delanteras con ganancia proporcional de 8,0 s⁻¹ y las velocidades de las dos ruedas traseras. La pose de referencia del simulador proporciona la realimentación y la medición.
+
+Si cambias la curva en `geometry.py`, ejecuta `python3 tools/update_course.py` y recompila para actualizar la marca visible del escenario.
+
+## Entregables
+
+- [Archivo de Fusion 360](cad/fusion360/Ackermann_Challenger.f3d) y [planos de las piezas](cad/planos/Ackermann_Challenger%20Planos.pdf). Lámina 1, ensamblaje y lista de 9 piezas. Lámina 2, base. Láminas 3–4, manguetas. Lámina 5, geometría de las cuatro ruedas. Lámina 6, carrocería. Lámina 7, LiDAR.
+- [Informe IEEE en inglés](docs/ieee_paper/challenger_ieee.pdf) y [fuente LaTeX](docs/ieee_paper/challenger_ieee.tex). El informe usa la clase IEEEtran en modo `conference`. Con IEEEtran y `pdflatex` instalados, ejecuta `pdflatex challenger_ieee.tex` dos veces desde `docs/ieee_paper`.
+- [Presentación numerada](docs/presentacion/challenger_g4.pptx) y [guion cronometrado](docs/presentacion/guion.md).
+- [Video de la corrida en Gazebo](docs/resultados/gazebo_trayectoria.mp4) y [métricas y datos de la misma corrida](docs/resultados/). El video reproduce la captura a 2×. El tiempo del informe se mide con el reloj de simulación.
+
+Para el video de presentación, graben al grupo con las diapositivas y un fragmento de la corrida en pantalla. El guion asigna intervenciones y deja margen dentro del máximo de cinco minutos. Sustituyan la identificación «Grupo 4» por la lista oficial de integrantes si la pauta de entrega la solicita.

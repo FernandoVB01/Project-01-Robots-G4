@@ -1,67 +1,51 @@
-import os
+from pathlib import Path
+from shlex import quote
+
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, TimerAction
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration, PythonExpression
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 import xacro
-from os.path import join
+
 
 def generate_launch_description():
+    share = Path(get_package_share_directory('ackermann_challenger_description'))
+    gazebo_share = Path(get_package_share_directory('ros_gz_sim'))
+    urdf = xacro.process_file(str(share / 'urdf' / 'Ackermann_Challenger.xacro')).toxml()
 
-    pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
-    pkg_ros_gz_rbot = get_package_share_directory('Ackermann_Challenger_description')
-
-
-    robot_description_file = os.path.join(pkg_ros_gz_rbot, 'urdf', 'Ackermann_Challenger.xacro')
-    ros_gz_bridge_config = os.path.join(pkg_ros_gz_rbot, 'config', 'ros_gz_bridge_gazebo.yaml')
-    
-    robot_description_config = xacro.process_file(robot_description_file)
-    robot_description = {'robot_description': robot_description_config.toxml()}
-
-   
-    robot_state_publisher = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        name='robot_state_publisher',
-        output='screen',
-        parameters=[robot_description],
-    )
-
-   
-    gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(join(pkg_ros_gz_sim, "launch", "gz_sim.launch.py")),
-        launch_arguments={"gz_args": "-r -v 4 empty.sdf"}.items()
-    )
-
-    spawn_robot = TimerAction(
-        period=5.0,  
-        actions=[Node(
-            package='ros_gz_sim',
-            executable='create',
-            arguments=[
-                "-topic", "/robot_description",
-                "-name", "Ackermann_Challenger",
-                "-allow_renaming", "false",  # prevents "_1" duplicate
-                "-x", "0.0",
-                "-y", "0.0",
-                "-z", "0.32",
-                "-Y", "0.0"
-            ],
-            output='screen'
-        )]
-    )
-
-    ros_gz_bridge = Node(
-        package='ros_gz_bridge',
-        executable='parameter_bridge',
-        parameters=[{'config_file': ros_gz_bridge_config}],
-        output='screen'
-    )
+    world = quote(str(share / 'worlds' / 'challenger_course.sdf'))
+    gz_args = PythonExpression([
+        repr(f'-r -v 3 {world}'), " + (' -s' if '",
+        LaunchConfiguration('gui'), "'.lower() == 'false' else '')",
+    ])
 
     return LaunchDescription([
-        gazebo,
-        spawn_robot,
-        ros_gz_bridge,
-        robot_state_publisher,
+        DeclareLaunchArgument('gui', default_value='true', choices=['true', 'false']),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(str(gazebo_share / 'launch' / 'gz_sim.launch.py')),
+            launch_arguments={'gz_args': gz_args, 'on_exit_shutdown': 'true'}.items(),
+        ),
+        Node(
+            package='robot_state_publisher',
+            executable='robot_state_publisher',
+            parameters=[{'robot_description': ParameterValue(urdf, value_type=str),
+                         'use_sim_time': True}],
+            output='screen',
+        ),
+        Node(
+            package='ros_gz_sim',
+            executable='create',
+            arguments=['-world', 'challenger_course', '-name', 'challenger',
+                       '-topic', '/robot_description', '-x', '0.150', '-z', '0.003'],
+            output='screen',
+        ),
+        Node(
+            package='ros_gz_bridge',
+            executable='parameter_bridge',
+            parameters=[{'config_file': str(share / 'config' / 'bridge.yaml')}],
+            output='screen',
+        ),
     ])

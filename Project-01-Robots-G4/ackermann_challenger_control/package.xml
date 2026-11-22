@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ackermann_challenger_control</name>
+  <version>0.1.0</version>
+  <description>Pure Pursuit figure-eight tracking and telemetry for the Ackermann Challenger.</description>
+  <maintainer email="FernandoVB01@users.noreply.github.com">Grupo 4</maintainer>
+  <license>Unspecified</license>
+  <exec_depend>ackermann_challenger_description</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

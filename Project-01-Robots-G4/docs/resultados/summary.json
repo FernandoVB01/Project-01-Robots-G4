@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "simulated_duration_s": 28.6,
+  "reference_length_m": 15.293381781796374,
+  "station_m": 15.227350785613039,
+  "samples": 573,
+  "rmse_m": 0.0012052938703344973,
+  "max_error_m": 0.0033335610129939,
+  "endpoint_error_m": 0.066031090855037,
+  "speed_mps": 0.55,
+  "lookahead_m": 0.32
+}
