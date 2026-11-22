@@ -1,6 +1,39 @@
 # Ackermann Challenger · Grupo 4
 
+## Resumen
+
 Robot móvil basado en el diseño del grupo en Autodesk Fusion 360. El modelo URDF/Xacro se importa a Gazebo Harmonic y un nodo ROS 2 Jazzy lo guía por una vuelta en ocho de 15,29 m mediante Pure Pursuit.
+
+La corrida grabada terminó con estado `completed` y registró 573 muestras. El error se mide entre el centro del eje trasero y la rama de referencia que el robot sigue en ese momento.
+
+| Resultado de la corrida grabada | Valor |
+|---|---:|
+| Tiempo de simulación | 28,6 s |
+| Error RMS de seguimiento | 1,2 mm |
+| Error máximo de seguimiento | 3,3 mm |
+| Distancia a la meta al ordenar la parada | 6,60 cm |
+
+## Evidencias de la simulación
+
+### Video en Gazebo
+
+[![Captura del robot en el primer lóbulo del ocho en Gazebo. Abre el video completo.](docs/resultados/imagenes/gazebo.png)](docs/resultados/gazebo_trayectoria.mp4)
+
+El video muestra la salida, los dos lóbulos y la parada. La captura se reproduce a 2× y las métricas usan el reloj de simulación. [Ver video completo en MP4](docs/resultados/gazebo_trayectoria.mp4)
+
+### Trayectoria y error de seguimiento
+
+![Comparación de la trayectoria en ocho de referencia y la pose del eje trasero registrada en Gazebo](docs/resultados/imagenes/trajectory.png)
+
+![Error de seguimiento en centímetros durante la vuelta. La línea discontinua indica el RMS.](docs/resultados/imagenes/tracking_error.png)
+
+[Resumen de métricas (JSON)](docs/resultados/summary.json) · [Telemetría de la corrida (CSV)](docs/resultados/tracking.csv)
+
+### Vista del diseño en Fusion 360
+
+<img src="docs/resultados/imagenes/fusion-360.png" width="520" alt="Vista isométrica del Challenger procedente del archivo Fusion 360 del grupo">
+
+[Archivo de Fusion 360](cad/fusion360/Ackermann_Challenger.f3d) · [Planos acotados](cad/planos/Ackermann_Challenger%20Planos.pdf)
 
 ## Compilar y ejecutar
 
@@ -14,7 +47,7 @@ sudo apt install -y git make python3-colcon-common-extensions ros-jazzy-ros-base
 
 Para la visualización opcional en RViz, instala también `ros-jazzy-rviz2` y `ros-jazzy-joint-state-publisher-gui`. Para hacer gráficas, instala `python3-matplotlib`.
 
-Si ya tienes la copia entregada, abre una terminal en esta carpeta, donde están este README y los dos paquetes. Cuando la revisión esté disponible en GitHub, la estructura del repositorio se clona así.
+Si ya tienes el repositorio, abre una terminal en esta carpeta, donde están este README y los dos paquetes. Para clonar el proyecto por primera vez, ejecuta lo siguiente.
 
 ```bash
 git clone https://github.com/FernandoVB01/Project-01-Robots-G4.git
@@ -106,6 +139,6 @@ Si cambias la curva en `geometry.py`, ejecuta `python3 tools/update_course.py` y
 - [Archivo de Fusion 360](cad/fusion360/Ackermann_Challenger.f3d) y [planos de las piezas](cad/planos/Ackermann_Challenger%20Planos.pdf). Lámina 1, ensamblaje y lista de 9 piezas. Lámina 2, base. Láminas 3–4, manguetas. Lámina 5, geometría de las cuatro ruedas. Lámina 6, carrocería. Lámina 7, LiDAR.
 - [Informe IEEE en inglés](docs/ieee_paper/challenger_ieee.pdf) y [fuente LaTeX](docs/ieee_paper/challenger_ieee.tex). El informe usa la clase IEEEtran en modo `conference`. Con IEEEtran y `pdflatex` instalados, ejecuta `pdflatex challenger_ieee.tex` dos veces desde `docs/ieee_paper`.
 - [Presentación numerada](docs/presentacion/challenger_g4.pptx) y [guion cronometrado](docs/presentacion/guion.md).
-- [Video de la corrida en Gazebo](docs/resultados/gazebo_trayectoria.mp4) y [métricas y datos de la misma corrida](docs/resultados/). El video reproduce la captura a 2×. El tiempo del informe se mide con el reloj de simulación.
+- [Video, gráficas y datos de la corrida](#evidencias-de-la-simulación).
 
 Para el video de presentación, graben al grupo con las diapositivas y un fragmento de la corrida en pantalla. El guion asigna intervenciones y deja margen dentro del máximo de cinco minutos. Sustituyan la identificación «Grupo 4» por la lista oficial de integrantes si la pauta de entrega la solicita.
