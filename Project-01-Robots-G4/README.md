@@ -141,4 +141,4 @@ Si cambias la curva en `geometry.py`, ejecuta `python3 tools/update_course.py` y
 - [Presentación numerada](docs/presentacion/challenger_g4.pptx) y [guion cronometrado](docs/presentacion/guion.md).
 - [Video, gráficas y datos de la corrida](#evidencias-de-la-simulación).
 
-Para el video de presentación, graben al grupo con las diapositivas y un fragmento de la corrida en pantalla. El guion asigna intervenciones y deja margen dentro del máximo de cinco minutos. Sustituyan la identificación «Grupo 4» por la lista oficial de integrantes si la pauta de entrega la solicita.
+
