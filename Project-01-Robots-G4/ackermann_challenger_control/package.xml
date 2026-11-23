@@ -2,7 +2,7 @@
 <package format="3">
   <name>ackermann_challenger_control</name>
   <version>0.1.0</version>
-  <description>Pure Pursuit figure-eight tracking and telemetry for the Ackermann Challenger.</description>
+  <description>Pure Pursuit tracking and telemetry for the Ackermann Challenger.</description>
   <maintainer email="FernandoVB01@users.noreply.github.com">Grupo 4</maintainer>
   <license>Unspecified</license>
   <exec_depend>ackermann_challenger_description</exec_depend>

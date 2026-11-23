@@ -12,7 +12,7 @@ from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from rclpy.qos import DurabilityPolicy, QoSProfile
 
-from .geometry import Course, Motion, pursuit
+from .geometry import CORNER_RADIUS, SIDE_LENGTH, Course, Motion, pursuit
 
 
 class Tracker(Node):
@@ -33,7 +33,7 @@ class Tracker(Node):
         self.output = FilePath(self.get_parameter('output_dir').value).expanduser()
         self.output.mkdir(parents=True, exist_ok=True)
         self.log_file = (self.output / 'tracking.csv').open('w', newline='')
-        self.log = csv.writer(self.log_file)
+        self.log = csv.writer(self.log_file, lineterminator='\n')
         self.log.writerow(['time_s', 'x_m', 'y_m', 'yaw_rad', 'station_m',
                            'reference_x_m', 'reference_y_m', 'error_m', 'speed_mps',
                            'command_yaw_radps', 'command_steering_rad'])
@@ -101,7 +101,7 @@ class Tracker(Node):
             return
         if self.started_at is None:
             self.started_at = stamp
-            self.get_logger().info('Tracking one figure-eight lap.')
+            self.get_logger().info('Tracking one rounded-hexagon lap.')
         self.last_sample = stamp
 
         error, station, rx, ry = self.course.project(x, y, self.station)
@@ -137,6 +137,9 @@ class Tracker(Node):
         self.terminal = True
         self.log_file.close()
         summary = {
+            'course': 'rounded_hexagon',
+            'nominal_side_length_m': SIDE_LENGTH,
+            'corner_radius_m': CORNER_RADIUS,
             'status': state,
             'simulated_duration_s': elapsed,
             'reference_length_m': self.course.length,

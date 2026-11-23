@@ -42,7 +42,7 @@ def main():
     ax.xaxis.set_major_locator(MultipleLocator(1))
     ax.yaxis.set_major_locator(MultipleLocator(1))
     ax.grid(alpha=0.24)
-    ax.legend(frameon=False, loc='lower left', fontsize=8)
+    ax.legend(frameon=False, loc='center', fontsize=8)
     save(fig, args.output / 'trajectory')
 
     fig, ax = plt.subplots(figsize=(3.44, 1.72), layout='constrained')
@@ -54,6 +54,7 @@ def main():
     save(fig, args.output / 'tracking_error')
 
     values = {
+        'RouteLength': f'{stats["reference_length_m"]:.2f}',
         'RunDuration': f'{stats["simulated_duration_s"]:.2f}',
         'RunSamples': str(stats['samples']),
         'RunRMSE': f'{100 * stats["rmse_m"]:.2f}',

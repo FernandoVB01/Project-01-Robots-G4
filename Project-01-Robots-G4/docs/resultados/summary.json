@@ -1,12 +1,15 @@
 {
+  "course": "rounded_hexagon",
+  "nominal_side_length_m": 2.55,
+  "corner_radius_m": 0.95,
   "status": "completed",
-  "simulated_duration_s": 28.6,
-  "reference_length_m": 15.293381781796374,
-  "station_m": 15.227350785613039,
-  "samples": 573,
-  "rmse_m": 0.0012052938703344973,
-  "max_error_m": 0.0033335610129939,
-  "endpoint_error_m": 0.066031090855037,
+  "simulated_duration_s": 27.5,
+  "reference_length_m": 14.687123877498335,
+  "station_m": 14.621119229099781,
+  "samples": 551,
+  "rmse_m": 0.0020346162046138996,
+  "max_error_m": 0.005572902728445587,
+  "endpoint_error_m": 0.06601350392704017,
   "speed_mps": 0.55,
   "lookahead_m": 0.32
 }

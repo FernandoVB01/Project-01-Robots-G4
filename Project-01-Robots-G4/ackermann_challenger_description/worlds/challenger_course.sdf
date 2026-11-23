@@ -24,7 +24,7 @@
         <scene>scene</scene>
         <ambient_light>0.64 0.67 0.71</ambient_light>
         <background_color>0.76 0.80 0.84</background_color>
-        <camera_pose>0 -1.65 5.6 0 1.2818 1.5708</camera_pose>
+        <camera_pose>0 0.24 6.6 0 1.2818 1.5708</camera_pose>
       </plugin>
       <plugin filename="GzSceneManager" name="Scene Manager">
         <gz-gui>
@@ -86,674 +86,674 @@
       <link name="centerline">
       <!-- BEGIN GENERATED CENTERLINE -->
       <visual name="segment_000">
-        <pose>0.06827 -0.00003 0.001 0 0 -0.00038</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.06557 0.00000 0.001 0 0 0.00000</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_001">
-        <pose>0.20482 -0.00023 0.001 0 0 -0.00258</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.19670 0.00000 0.001 0 0 0.00000</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_002">
-        <pose>0.34137 -0.00089 0.001 0 0 -0.00707</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.32784 0.00000 0.001 0 0 0.00000</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_003">
-        <pose>0.47791 -0.00232 0.001 0 0 -0.01392</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.45897 0.00000 0.001 0 0 0.00000</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_004">
-        <pose>0.61443 -0.00487 0.001 0 0 -0.02340</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.59011 0.00000 0.001 0 0 0.00000</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_005">
-        <pose>0.75091 -0.00890 0.001 0 0 -0.03562</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.72122 0.00096 0.001 0 0 0.01464</pose>
+        <geometry><box><size>0.13911 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_006">
-        <pose>0.88733 -0.01483 0.001 0 0 -0.05129</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.85171 0.01059 0.001 0 0 0.13281</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_007">
-        <pose>1.02361 -0.02314 0.001 0 0 -0.07059</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.97978 0.03677 0.001 0 0 0.27042</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_008">
-        <pose>1.15968 -0.03439 0.001 0 0 -0.09437</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>1.10303 0.08030 0.001 0 0 0.40855</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_009">
-        <pose>1.29540 -0.04924 0.001 0 0 -0.12356</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>1.21912 0.14039 0.001 0 0 0.54673</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_010">
-        <pose>1.43055 -0.06852 0.001 0 0 -0.15982</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>1.32585 0.21586 0.001 0 0 0.68429</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_011">
-        <pose>1.56480 -0.09323 0.001 0 0 -0.20433</pose>
-        <geometry><box><size>0.14453 0.032 0.001</size></box></geometry>
+        <pose>1.42116 0.30531 0.001 0 0 0.82305</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_012">
-        <pose>1.69761 -0.12467 0.001 0 0 -0.26045</pose>
-        <geometry><box><size>0.14453 0.032 0.001</size></box></geometry>
+        <pose>1.50326 0.40704 0.001 0 0 0.96056</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_013">
-        <pose>1.82811 -0.16445 0.001 0 0 -0.33139</pose>
-        <geometry><box><size>0.14451 0.032 0.001</size></box></geometry>
+        <pose>1.57366 0.51747 0.001 0 0 1.04587</pose>
+        <geometry><box><size>0.13913 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_014">
-        <pose>1.95490 -0.21463 0.001 0 0 -0.42227</pose>
-        <geometry><box><size>0.14449 0.032 0.001</size></box></geometry>
+        <pose>1.63930 0.63099 0.001 0 0 1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_015">
-        <pose>2.07568 -0.27764 0.001 0 0 -0.53955</pose>
-        <geometry><box><size>0.14445 0.032 0.001</size></box></geometry>
+        <pose>1.70487 0.74456 0.001 0 0 1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_016">
-        <pose>2.18679 -0.35611 0.001 0 0 -0.69020</pose>
-        <geometry><box><size>0.14438 0.032 0.001</size></box></geometry>
+        <pose>1.77044 0.85812 0.001 0 0 1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_017">
-        <pose>2.28302 -0.45188 0.001 0 0 -0.87592</pose>
-        <geometry><box><size>0.14431 0.032 0.001</size></box></geometry>
+        <pose>1.83600 0.97169 0.001 0 0 1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_018">
-        <pose>2.35824 -0.56461 0.001 0 0 -1.08890</pose>
-        <geometry><box><size>0.14428 0.032 0.001</size></box></geometry>
+        <pose>1.90157 1.08525 0.001 0 0 1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_019">
-        <pose>2.40768 -0.69076 0.001 0 0 -1.30560</pose>
-        <geometry><box><size>0.14430 0.032 0.001</size></box></geometry>
+        <pose>1.96714 1.19882 0.001 0 0 1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_020">
-        <pose>2.43018 -0.82454 0.001 0 0 -1.50265</pose>
-        <geometry><box><size>0.14436 0.032 0.001</size></box></geometry>
+        <pose>2.03271 1.31239 0.001 0 0 1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_021">
-        <pose>2.42818 -0.96045 0.001 0 0 -1.66831</pose>
-        <geometry><box><size>0.14442 0.032 0.001</size></box></geometry>
+        <pose>2.09827 1.42595 0.001 0 0 1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_022">
-        <pose>2.40574 -1.09471 0.001 0 0 -1.80443</pose>
-        <geometry><box><size>0.14446 0.032 0.001</size></box></geometry>
+        <pose>2.16384 1.53952 0.001 0 0 1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_023">
-        <pose>2.36683 -1.22529 0.001 0 0 -1.91641</pose>
-        <geometry><box><size>0.14449 0.032 0.001</size></box></geometry>
+        <pose>2.22941 1.65309 0.001 0 0 1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_024">
-        <pose>2.31459 -1.35123 0.001 0 0 -2.01159</pose>
-        <geometry><box><size>0.14450 0.032 0.001</size></box></geometry>
+        <pose>2.29245 1.76799 0.001 0 0 1.09089</pose>
+        <geometry><box><size>0.13905 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_025">
-        <pose>2.25133 -1.47206 0.001 0 0 -2.09461</pose>
-        <geometry><box><size>0.14451 0.032 0.001</size></box></geometry>
+        <pose>2.34486 1.88777 0.001 0 0 1.22566</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_026">
-        <pose>2.17869 -1.58753 0.001 0 0 -2.17008</pose>
-        <geometry><box><size>0.14452 0.032 0.001</size></box></geometry>
+        <pose>2.38049 2.01353 0.001 0 0 1.36388</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_027">
-        <pose>2.09777 -1.69738 0.001 0 0 -2.24129</pose>
-        <geometry><box><size>0.14452 0.032 0.001</size></box></geometry>
+        <pose>2.39849 2.14301 0.001 0 0 1.50139</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_028">
-        <pose>2.00930 -1.80124 0.001 0 0 -2.31144</pose>
-        <geometry><box><size>0.14452 0.032 0.001</size></box></geometry>
+        <pose>2.39849 2.27372 0.001 0 0 1.64020</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_029">
-        <pose>1.91371 -1.89859 0.001 0 0 -2.38265</pose>
-        <geometry><box><size>0.14452 0.032 0.001</size></box></geometry>
+        <pose>2.38049 2.40320 0.001 0 0 1.77771</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_030">
-        <pose>1.81126 -1.98866 0.001 0 0 -2.45812</pose>
-        <geometry><box><size>0.14451 0.032 0.001</size></box></geometry>
+        <pose>2.34486 2.52896 0.001 0 0 1.91594</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_031">
-        <pose>1.70202 -2.07033 0.001 0 0 -2.54113</pose>
-        <geometry><box><size>0.14450 0.032 0.001</size></box></geometry>
+        <pose>2.29245 2.64874 0.001 0 0 2.05070</pose>
+        <geometry><box><size>0.13905 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_032">
-        <pose>1.58600 -2.14193 0.001 0 0 -2.63632</pose>
-        <geometry><box><size>0.14449 0.032 0.001</size></box></geometry>
+        <pose>2.22941 2.76364 0.001 0 0 2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_033">
-        <pose>1.46326 -2.20111 0.001 0 0 -2.74830</pose>
-        <geometry><box><size>0.14446 0.032 0.001</size></box></geometry>
+        <pose>2.16384 2.87721 0.001 0 0 2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_034">
-        <pose>1.33427 -2.24460 0.001 0 0 -2.88442</pose>
-        <geometry><box><size>0.14442 0.032 0.001</size></box></geometry>
+        <pose>2.09827 2.99078 0.001 0 0 2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_035">
-        <pose>1.20041 -2.26818 0.001 0 0 -3.05008</pose>
-        <geometry><box><size>0.14436 0.032 0.001</size></box></geometry>
+        <pose>2.03271 3.10434 0.001 0 0 2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_036">
-        <pose>1.06475 -2.26724 0.001 0 0 3.03606</pose>
-        <geometry><box><size>0.14430 0.032 0.001</size></box></geometry>
+        <pose>1.96714 3.21791 0.001 0 0 2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_037">
-        <pose>0.93235 -2.23848 0.001 0 0 2.81936</pose>
-        <geometry><box><size>0.14428 0.032 0.001</size></box></geometry>
+        <pose>1.90157 3.33147 0.001 0 0 2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_038">
-        <pose>0.80909 -2.18214 0.001 0 0 2.60638</pose>
-        <geometry><box><size>0.14431 0.032 0.001</size></box></geometry>
+        <pose>1.83600 3.44504 0.001 0 0 2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_039">
-        <pose>0.69924 -2.10236 0.001 0 0 2.42065</pose>
-        <geometry><box><size>0.14438 0.032 0.001</size></box></geometry>
+        <pose>1.77044 3.55861 0.001 0 0 2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_040">
-        <pose>0.60411 -2.00514 0.001 0 0 2.27000</pose>
-        <geometry><box><size>0.14445 0.032 0.001</size></box></geometry>
+        <pose>1.70487 3.67217 0.001 0 0 2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_041">
-        <pose>0.52269 -1.89591 0.001 0 0 2.15272</pose>
-        <geometry><box><size>0.14449 0.032 0.001</size></box></geometry>
+        <pose>1.63930 3.78574 0.001 0 0 2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_042">
-        <pose>0.45300 -1.77871 0.001 0 0 2.06185</pose>
-        <geometry><box><size>0.14451 0.032 0.001</size></box></geometry>
+        <pose>1.57366 3.89926 0.001 0 0 2.09572</pose>
+        <geometry><box><size>0.13913 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_043">
-        <pose>0.39297 -1.65620 0.001 0 0 1.99091</pose>
-        <geometry><box><size>0.14453 0.032 0.001</size></box></geometry>
+        <pose>1.50326 4.00969 0.001 0 0 2.18104</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_044">
-        <pose>0.34082 -1.53007 0.001 0 0 1.93479</pose>
-        <geometry><box><size>0.14453 0.032 0.001</size></box></geometry>
+        <pose>1.42116 4.11142 0.001 0 0 2.31854</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_045">
-        <pose>0.29508 -1.40147 0.001 0 0 1.89028</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>1.32585 4.20087 0.001 0 0 2.45730</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_046">
-        <pose>0.25456 -1.27110 0.001 0 0 1.85401</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>1.21912 4.27634 0.001 0 0 2.59486</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_047">
-        <pose>0.21832 -1.13947 0.001 0 0 1.82483</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>1.10303 4.33643 0.001 0 0 2.73304</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_048">
-        <pose>0.18559 -1.00692 0.001 0 0 1.80105</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.97978 4.37996 0.001 0 0 2.87117</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_049">
-        <pose>0.15571 -0.87369 0.001 0 0 1.78175</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.85171 4.40614 0.001 0 0 3.00878</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_050">
-        <pose>0.12817 -0.73995 0.001 0 0 1.76607</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.72122 4.41577 0.001 0 0 3.12696</pose>
+        <geometry><box><size>0.13911 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_051">
-        <pose>0.10249 -0.60584 0.001 0 0 1.75386</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.59011 4.41673 0.001 0 0 3.14159</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_052">
-        <pose>0.07827 -0.47146 0.001 0 0 1.74437</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.45897 4.41673 0.001 0 0 3.14159</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_053">
-        <pose>0.05515 -0.33689 0.001 0 0 1.73753</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.32784 4.41673 0.001 0 0 3.14159</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_054">
-        <pose>0.03279 -0.20218 0.001 0 0 1.73303</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.19670 4.41673 0.001 0 0 3.14159</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_055">
-        <pose>0.01088 -0.06740 0.001 0 0 1.73084</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>0.06557 4.41673 0.001 0 0 3.14159</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_056">
-        <pose>-0.01088 0.06740 0.001 0 0 1.73084</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.06557 4.41673 0.001 0 0 3.14159</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_057">
-        <pose>-0.03279 0.20218 0.001 0 0 1.73303</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.19670 4.41673 0.001 0 0 3.14159</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_058">
-        <pose>-0.05515 0.33689 0.001 0 0 1.73753</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.32784 4.41673 0.001 0 0 3.14159</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_059">
-        <pose>-0.07827 0.47146 0.001 0 0 1.74437</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.45897 4.41673 0.001 0 0 3.14159</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_060">
-        <pose>-0.10249 0.60584 0.001 0 0 1.75386</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.59011 4.41673 0.001 0 0 3.14159</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_061">
-        <pose>-0.12817 0.73995 0.001 0 0 1.76607</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.72122 4.41577 0.001 0 0 -3.12696</pose>
+        <geometry><box><size>0.13911 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_062">
-        <pose>-0.15571 0.87369 0.001 0 0 1.78175</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.85171 4.40614 0.001 0 0 -3.00878</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_063">
-        <pose>-0.18559 1.00692 0.001 0 0 1.80105</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.97978 4.37996 0.001 0 0 -2.87117</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_064">
-        <pose>-0.21832 1.13947 0.001 0 0 1.82483</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>-1.10303 4.33643 0.001 0 0 -2.73304</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_065">
-        <pose>-0.25456 1.27110 0.001 0 0 1.85401</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>-1.21912 4.27634 0.001 0 0 -2.59486</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_066">
-        <pose>-0.29508 1.40147 0.001 0 0 1.89028</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>-1.32585 4.20087 0.001 0 0 -2.45730</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_067">
-        <pose>-0.34082 1.53007 0.001 0 0 1.93479</pose>
-        <geometry><box><size>0.14453 0.032 0.001</size></box></geometry>
+        <pose>-1.42116 4.11142 0.001 0 0 -2.31854</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_068">
-        <pose>-0.39297 1.65620 0.001 0 0 1.99091</pose>
-        <geometry><box><size>0.14453 0.032 0.001</size></box></geometry>
+        <pose>-1.50326 4.00969 0.001 0 0 -2.18104</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_069">
-        <pose>-0.45300 1.77871 0.001 0 0 2.06185</pose>
-        <geometry><box><size>0.14451 0.032 0.001</size></box></geometry>
+        <pose>-1.57366 3.89926 0.001 0 0 -2.09572</pose>
+        <geometry><box><size>0.13913 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_070">
-        <pose>-0.52269 1.89591 0.001 0 0 2.15272</pose>
-        <geometry><box><size>0.14449 0.032 0.001</size></box></geometry>
+        <pose>-1.63930 3.78574 0.001 0 0 -2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_071">
-        <pose>-0.60411 2.00514 0.001 0 0 2.27000</pose>
-        <geometry><box><size>0.14445 0.032 0.001</size></box></geometry>
+        <pose>-1.70487 3.67217 0.001 0 0 -2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_072">
-        <pose>-0.69924 2.10236 0.001 0 0 2.42065</pose>
-        <geometry><box><size>0.14438 0.032 0.001</size></box></geometry>
+        <pose>-1.77044 3.55861 0.001 0 0 -2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_073">
-        <pose>-0.80909 2.18214 0.001 0 0 2.60638</pose>
-        <geometry><box><size>0.14431 0.032 0.001</size></box></geometry>
+        <pose>-1.83600 3.44504 0.001 0 0 -2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_074">
-        <pose>-0.93235 2.23848 0.001 0 0 2.81936</pose>
-        <geometry><box><size>0.14428 0.032 0.001</size></box></geometry>
+        <pose>-1.90157 3.33147 0.001 0 0 -2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_075">
-        <pose>-1.06475 2.26724 0.001 0 0 3.03606</pose>
-        <geometry><box><size>0.14430 0.032 0.001</size></box></geometry>
+        <pose>-1.96714 3.21791 0.001 0 0 -2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_076">
-        <pose>-1.20041 2.26818 0.001 0 0 -3.05008</pose>
-        <geometry><box><size>0.14436 0.032 0.001</size></box></geometry>
+        <pose>-2.03271 3.10434 0.001 0 0 -2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_077">
-        <pose>-1.33427 2.24460 0.001 0 0 -2.88442</pose>
-        <geometry><box><size>0.14442 0.032 0.001</size></box></geometry>
+        <pose>-2.09827 2.99078 0.001 0 0 -2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_078">
-        <pose>-1.46326 2.20111 0.001 0 0 -2.74830</pose>
-        <geometry><box><size>0.14446 0.032 0.001</size></box></geometry>
+        <pose>-2.16384 2.87721 0.001 0 0 -2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_079">
-        <pose>-1.58600 2.14193 0.001 0 0 -2.63632</pose>
-        <geometry><box><size>0.14449 0.032 0.001</size></box></geometry>
+        <pose>-2.22941 2.76364 0.001 0 0 -2.09440</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_080">
-        <pose>-1.70202 2.07033 0.001 0 0 -2.54113</pose>
-        <geometry><box><size>0.14450 0.032 0.001</size></box></geometry>
+        <pose>-2.29245 2.64874 0.001 0 0 -2.05070</pose>
+        <geometry><box><size>0.13905 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_081">
-        <pose>-1.81126 1.98866 0.001 0 0 -2.45812</pose>
-        <geometry><box><size>0.14451 0.032 0.001</size></box></geometry>
+        <pose>-2.34486 2.52896 0.001 0 0 -1.91594</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_082">
-        <pose>-1.91371 1.89859 0.001 0 0 -2.38265</pose>
-        <geometry><box><size>0.14452 0.032 0.001</size></box></geometry>
+        <pose>-2.38049 2.40320 0.001 0 0 -1.77771</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_083">
-        <pose>-2.00930 1.80124 0.001 0 0 -2.31144</pose>
-        <geometry><box><size>0.14452 0.032 0.001</size></box></geometry>
+        <pose>-2.39849 2.27372 0.001 0 0 -1.64020</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_084">
-        <pose>-2.09777 1.69738 0.001 0 0 -2.24129</pose>
-        <geometry><box><size>0.14452 0.032 0.001</size></box></geometry>
+        <pose>-2.39849 2.14301 0.001 0 0 -1.50139</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_085">
-        <pose>-2.17869 1.58753 0.001 0 0 -2.17008</pose>
-        <geometry><box><size>0.14452 0.032 0.001</size></box></geometry>
+        <pose>-2.38049 2.01353 0.001 0 0 -1.36388</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_086">
-        <pose>-2.25133 1.47206 0.001 0 0 -2.09461</pose>
-        <geometry><box><size>0.14451 0.032 0.001</size></box></geometry>
+        <pose>-2.34486 1.88777 0.001 0 0 -1.22566</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_087">
-        <pose>-2.31459 1.35123 0.001 0 0 -2.01159</pose>
-        <geometry><box><size>0.14450 0.032 0.001</size></box></geometry>
+        <pose>-2.29245 1.76799 0.001 0 0 -1.09089</pose>
+        <geometry><box><size>0.13905 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_088">
-        <pose>-2.36683 1.22529 0.001 0 0 -1.91641</pose>
-        <geometry><box><size>0.14449 0.032 0.001</size></box></geometry>
+        <pose>-2.22941 1.65309 0.001 0 0 -1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_089">
-        <pose>-2.40574 1.09471 0.001 0 0 -1.80443</pose>
-        <geometry><box><size>0.14446 0.032 0.001</size></box></geometry>
+        <pose>-2.16384 1.53952 0.001 0 0 -1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_090">
-        <pose>-2.42818 0.96045 0.001 0 0 -1.66831</pose>
-        <geometry><box><size>0.14442 0.032 0.001</size></box></geometry>
+        <pose>-2.09827 1.42595 0.001 0 0 -1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_091">
-        <pose>-2.43018 0.82454 0.001 0 0 -1.50265</pose>
-        <geometry><box><size>0.14436 0.032 0.001</size></box></geometry>
+        <pose>-2.03271 1.31239 0.001 0 0 -1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_092">
-        <pose>-2.40768 0.69076 0.001 0 0 -1.30560</pose>
-        <geometry><box><size>0.14430 0.032 0.001</size></box></geometry>
+        <pose>-1.96714 1.19882 0.001 0 0 -1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_093">
-        <pose>-2.35824 0.56461 0.001 0 0 -1.08890</pose>
-        <geometry><box><size>0.14428 0.032 0.001</size></box></geometry>
+        <pose>-1.90157 1.08525 0.001 0 0 -1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_094">
-        <pose>-2.28302 0.45188 0.001 0 0 -0.87592</pose>
-        <geometry><box><size>0.14431 0.032 0.001</size></box></geometry>
+        <pose>-1.83600 0.97169 0.001 0 0 -1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_095">
-        <pose>-2.18679 0.35611 0.001 0 0 -0.69020</pose>
-        <geometry><box><size>0.14438 0.032 0.001</size></box></geometry>
+        <pose>-1.77044 0.85812 0.001 0 0 -1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_096">
-        <pose>-2.07568 0.27764 0.001 0 0 -0.53955</pose>
-        <geometry><box><size>0.14445 0.032 0.001</size></box></geometry>
+        <pose>-1.70487 0.74456 0.001 0 0 -1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_097">
-        <pose>-1.95490 0.21463 0.001 0 0 -0.42227</pose>
-        <geometry><box><size>0.14449 0.032 0.001</size></box></geometry>
+        <pose>-1.63930 0.63099 0.001 0 0 -1.04720</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_098">
-        <pose>-1.82811 0.16445 0.001 0 0 -0.33139</pose>
-        <geometry><box><size>0.14451 0.032 0.001</size></box></geometry>
+        <pose>-1.57366 0.51747 0.001 0 0 -1.04587</pose>
+        <geometry><box><size>0.13913 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_099">
-        <pose>-1.69761 0.12467 0.001 0 0 -0.26045</pose>
-        <geometry><box><size>0.14453 0.032 0.001</size></box></geometry>
+        <pose>-1.50326 0.40704 0.001 0 0 -0.96056</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_100">
-        <pose>-1.56480 0.09323 0.001 0 0 -0.20433</pose>
-        <geometry><box><size>0.14453 0.032 0.001</size></box></geometry>
+        <pose>-1.42116 0.30531 0.001 0 0 -0.82305</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_101">
-        <pose>-1.43055 0.06852 0.001 0 0 -0.15982</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>-1.32585 0.21586 0.001 0 0 -0.68429</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_102">
-        <pose>-1.29540 0.04924 0.001 0 0 -0.12356</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>-1.21912 0.14039 0.001 0 0 -0.54673</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_103">
-        <pose>-1.15968 0.03439 0.001 0 0 -0.09437</pose>
-        <geometry><box><size>0.14454 0.032 0.001</size></box></geometry>
+        <pose>-1.10303 0.08030 0.001 0 0 -0.40855</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_104">
-        <pose>-1.02361 0.02314 0.001 0 0 -0.07059</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.97978 0.03677 0.001 0 0 -0.27042</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_105">
-        <pose>-0.88733 0.01483 0.001 0 0 -0.05129</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.85171 0.01059 0.001 0 0 -0.13281</pose>
+        <geometry><box><size>0.13903 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_106">
-        <pose>-0.75091 0.00890 0.001 0 0 -0.03562</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.72122 0.00096 0.001 0 0 -0.01464</pose>
+        <geometry><box><size>0.13911 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_107">
-        <pose>-0.61443 0.00487 0.001 0 0 -0.02340</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.59011 -0.00000 0.001 0 0 -0.00000</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_108">
-        <pose>-0.47791 0.00232 0.001 0 0 -0.01392</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.45897 -0.00000 0.001 0 0 -0.00000</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_109">
-        <pose>-0.34137 0.00089 0.001 0 0 -0.00707</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.32784 -0.00000 0.001 0 0 -0.00000</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_110">
-        <pose>-0.20482 0.00023 0.001 0 0 -0.00258</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.19670 -0.00000 0.001 0 0 -0.00000</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>
       <visual name="segment_111">
-        <pose>-0.06827 0.00003 0.001 0 0 -0.00038</pose>
-        <geometry><box><size>0.14455 0.032 0.001</size></box></geometry>
+        <pose>-0.06557 -0.00000 0.001 0 0 0.00000</pose>
+        <geometry><box><size>0.13914 0.032 0.001</size></box></geometry>
         <material><ambient>0.03 0.39 0.40 1</ambient><diffuse>0.03 0.48 0.50 1</diffuse></material>
         <cast_shadows>false</cast_shadows>
       </visual>

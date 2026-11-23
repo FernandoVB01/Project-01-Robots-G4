@@ -2,28 +2,28 @@
 
 ## Resumen
 
-Robot móvil basado en el diseño del grupo en Autodesk Fusion 360. El modelo URDF/Xacro se importa a Gazebo Harmonic y un nodo ROS 2 Jazzy lo guía por una vuelta en ocho de 15,29 m mediante Pure Pursuit.
+Robot móvil basado en el diseño del grupo en Autodesk Fusion 360. El modelo URDF/Xacro se importa a Gazebo Harmonic y un nodo ROS 2 Jazzy lo guía por un circuito hexagonal redondeado de 14,69 m mediante Pure Pursuit.
 
-La corrida grabada terminó con estado `completed` y registró 573 muestras. El error se mide entre el centro del eje trasero y la rama de referencia que el robot sigue en ese momento.
+La corrida grabada terminó con estado `completed` y registró 551 muestras. El error es la distancia entre el centro del eje trasero y su proyección local sobre la referencia.
 
 | Resultado de la corrida grabada | Valor |
 |---|---:|
-| Tiempo de simulación | 28,6 s |
-| Error RMS de seguimiento | 1,2 mm |
-| Error máximo de seguimiento | 3,3 mm |
+| Tiempo de simulación | 27,50 s |
+| Error RMS de seguimiento | 2,0 mm |
+| Error máximo de seguimiento | 5,6 mm |
 | Distancia a la meta al ordenar la parada | 6,60 cm |
 
 ## Evidencias de la simulación
 
 ### Video en Gazebo
 
-[![Captura del robot en el primer lóbulo del ocho en Gazebo. Abre el video completo.](docs/resultados/imagenes/gazebo.png)](docs/resultados/gazebo_trayectoria.mp4)
+[![Captura del robot en el circuito hexagonal redondeado en Gazebo. Abre el video completo.](docs/resultados/imagenes/gazebo.png)](docs/resultados/gazebo_trayectoria.mp4)
 
-El video muestra la salida, los dos lóbulos y la parada. La captura se reproduce a 2× y las métricas usan el reloj de simulación. [Ver video completo en MP4](docs/resultados/gazebo_trayectoria.mp4)
+El video muestra la salida, los seis giros y la parada. La captura se reproduce a 2× y las métricas usan el reloj de simulación. [Ver video completo en MP4](docs/resultados/gazebo_trayectoria.mp4)
 
 ### Trayectoria y error de seguimiento
 
-![Comparación de la trayectoria en ocho de referencia y la pose del eje trasero registrada en Gazebo](docs/resultados/imagenes/trajectory.png)
+![Comparación de la referencia hexagonal y la pose del eje trasero registrada en Gazebo](docs/resultados/imagenes/trajectory.png)
 
 ![Error de seguimiento en centímetros durante la vuelta. La línea discontinua indica el RMS.](docs/resultados/imagenes/tracking_error.png)
 
@@ -96,7 +96,7 @@ python3 tools/plot_results.py resultados/headless resultados/headless/figuras
 
 Usa carpetas de salida distintas si quieres comparar corridas. Una corrida nueva reutiliza los nombres de archivo en la carpeta indicada.
 
-Si la ventana de Gazebo tarda en dibujar el escenario, puedes separar la apertura de la ventana y el inicio del controlador. Primero ejecuta `ros2 launch ackermann_challenger_control trajectory.launch.py drive:=false`. Cuando se vea el ocho, abre otra terminal en la misma carpeta, carga los dos `setup.bash` y ejecuta lo siguiente.
+Si la ventana de Gazebo tarda en dibujar el escenario, puedes separar la apertura de la ventana y el inicio del controlador. Primero ejecuta `ros2 launch ackermann_challenger_control trajectory.launch.py drive:=false`. Cuando se vea el circuito, abre otra terminal en la misma carpeta, carga los dos `setup.bash` y ejecuta lo siguiente.
 
 ```bash
 ros2 run ackermann_challenger_control trajectory_tracker --ros-args \
@@ -125,20 +125,22 @@ Si falta `/clock`, confirma que Gazebo esté ejecutándose sin pausa. Si no apar
 | Separación de pivotes delanteros | 120 mm |
 | Diámetro y ancho de rueda | 70 mm y 26 mm |
 | Recorrido de cada mangueta | ±35° |
-| Curvatura máxima de la referencia | 1,616 m⁻¹ |
+| Lado del hexágono base | 2,55 m |
+| Radio de los seis arcos | 0,95 m |
+| Curvatura máxima de la referencia | 1,053 m⁻¹ |
 | Curvatura máxima comandada | 1,8 m⁻¹ |
 
 Las mallas de Fusion conservan su geometría original. Los centros de los neumáticos están desplazados 9 mm hacia dentro con respecto a las juntas de giro. Las ruedas usan colisiones cilíndricas y el chasis una caja central. El paquete de descripción instala el escenario, el modelo y el puente de Gazebo.
 
 El seguidor proyecta la pose del punto medio del eje trasero sobre una ventana local de la referencia. Busca un objetivo adelantado, calcula la curvatura y publica la velocidad lineal y angular. El sistema Ackermann de Gazebo ajusta las manguetas delanteras con ganancia proporcional de 8,0 s⁻¹ y las velocidades de las dos ruedas traseras. La pose de referencia del simulador proporciona la realimentación y la medición.
 
+La vuelta empieza en el punto medio de la primera recta. Los arcos giran 60° y son tangentes a las rectas contiguas. La curvatura de referencia es 0 en recta y 1/0,95 m⁻¹ en los arcos.
+
 Si cambias la curva en `geometry.py`, ejecuta `python3 tools/update_course.py` y recompila para actualizar la marca visible del escenario.
 
 ## Entregables
 
 - [Archivo de Fusion 360](cad/fusion360/Ackermann_Challenger.f3d) y [planos de las piezas](cad/planos/Ackermann_Challenger%20Planos.pdf). Lámina 1, ensamblaje y lista de 9 piezas. Lámina 2, base. Láminas 3–4, manguetas. Lámina 5, geometría de las cuatro ruedas. Lámina 6, carrocería. Lámina 7, LiDAR.
-- [Informe IEEE en inglés](docs/ieee_paper/challenger_ieee.pdf) y [fuente LaTeX](docs/ieee_paper/challenger_ieee.tex). El informe usa la clase IEEEtran en modo `conference`. Con IEEEtran y `pdflatex` instalados, ejecuta `pdflatex challenger_ieee.tex` dos veces desde `docs/ieee_paper`.
-- [Presentación numerada](docs/presentacion/challenger_g4.pptx) y [guion cronometrado](docs/presentacion/guion.md).
+- [Informe IEEE en inglés (PDF)](docs/IEEE_AckermannG4.pdf).
+- [Presentación de 10 diapositivas (PowerPoint)](docs/presentacion/Ackermann_G4.pptx) y [guion en inglés](docs/presentacion/guion.md).
 - [Video, gráficas y datos de la corrida](#evidencias-de-la-simulación).
-
-
