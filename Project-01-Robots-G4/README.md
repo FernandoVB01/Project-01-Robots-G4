@@ -1,43 +1,43 @@
-# Ackermann Challenger · Grupo 4
+# Ackermann Challenger · Group 4
 
-## Resumen
+## Overview
 
-Robot móvil basado en el diseño del grupo en Autodesk Fusion 360. El modelo URDF/Xacro se importa a Gazebo Harmonic y un nodo ROS 2 Jazzy lo guía por un circuito hexagonal redondeado de 14,69 m mediante Pure Pursuit.
+This mobile robot uses the group's Autodesk Fusion 360 design. The URDF/Xacro model runs in Gazebo Harmonic, and a ROS 2 Jazzy node uses Pure Pursuit to guide it around a 14.69 m rounded hexagon.
 
-La corrida grabada terminó con estado `completed` y registró 551 muestras. El error es la distancia entre el centro del eje trasero y su proyección local sobre la referencia.
+The recorded run ended with status `completed` and logged 551 samples. Tracking error is the distance from the rear-axle midpoint to its local projection onto the reference route.
 
-| Resultado de la corrida grabada | Valor |
+| Recorded run | Value |
 |---|---:|
-| Tiempo de simulación | 27,50 s |
-| Error RMS de seguimiento | 2,0 mm |
-| Error máximo de seguimiento | 5,6 mm |
-| Distancia a la meta al ordenar la parada | 6,60 cm |
+| Simulation time | 27.50 s |
+| RMS tracking error | 2.0 mm |
+| Maximum tracking error | 5.6 mm |
+| Distance to the endpoint at the stop command | 6.60 cm |
 
-## Evidencias de la simulación
+## Simulation evidence
 
-### Video en Gazebo
+### Gazebo video
 
-[![Captura del robot en el circuito hexagonal redondeado en Gazebo. Abre el video completo.](docs/resultados/imagenes/gazebo.png)](docs/resultados/gazebo_trayectoria.mp4)
+[![Screenshot of the robot on the rounded-hexagon course in Gazebo. Opens the full video.](docs/results/images/gazebo.png)](docs/results/gazebo-trajectory.mp4)
 
-El video muestra la salida, los seis giros y la parada. La captura se reproduce a 2× y las métricas usan el reloj de simulación. [Ver video completo en MP4](docs/resultados/gazebo_trayectoria.mp4)
+The video shows the start, all six turns, and the stop. The recording plays at 2× speed. The metrics use the simulation clock. [Watch the full MP4](docs/results/gazebo-trajectory.mp4)
 
-### Trayectoria y error de seguimiento
+### Path and tracking error
 
-![Comparación de la referencia hexagonal y la pose del eje trasero registrada en Gazebo](docs/resultados/imagenes/trajectory.png)
+![Reference rounded hexagon and rear-axle path measured in Gazebo](docs/results/images/trajectory.png)
 
-![Error de seguimiento en centímetros durante la vuelta. La línea discontinua indica el RMS.](docs/resultados/imagenes/tracking_error.png)
+![Tracking error in centimeters over the lap. The dashed line marks the RMS error.](docs/results/images/tracking_error.png)
 
-[Resumen de métricas (JSON)](docs/resultados/summary.json) · [Telemetría de la corrida (CSV)](docs/resultados/tracking.csv)
+[Run summary (JSON)](docs/results/summary.json) · [Recorded telemetry (CSV)](docs/results/tracking.csv)
 
-### Vista del diseño en Fusion 360
+### Fusion 360 model
 
-<img src="docs/resultados/imagenes/fusion-360.png" width="520" alt="Vista isométrica del Challenger procedente del archivo Fusion 360 del grupo">
+<img src="docs/results/images/fusion-360.png" width="520" alt="Isometric view of the Challenger from the group's Fusion 360 archive">
 
-[Archivo de Fusion 360](cad/fusion360/Ackermann_Challenger.f3d) · [Planos acotados](cad/planos/Ackermann_Challenger%20Planos.pdf)
+[Fusion 360 archive](cad/fusion360/Ackermann_Challenger.f3d) · [Dimensioned engineering drawings](cad/drawings/Ackermann_Challenger_Drawings.pdf)
 
-## Compilar y ejecutar
+## Build and run
 
-Entorno objetivo: **Ubuntu 24.04 LTS, ROS 2 Jazzy y Gazebo Harmonic**. Si estás en Ubuntu 26.04, ejecuta estas instrucciones en una máquina virtual Ubuntu 24.04 para disponer de Jazzy y de la ventana de Gazebo. Configura primero el repositorio APT de ROS con la [guía oficial de Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html).
+Build with **Ubuntu 24.04 LTS, ROS 2 Jazzy, and Gazebo Harmonic**. On Ubuntu 26.04, run these steps in an Ubuntu 24.04 virtual machine to use Jazzy and the Gazebo GUI. Set up the ROS APT repository using the [official Jazzy installation guide](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html).
 
 ```bash
 sudo apt update
@@ -45,16 +45,16 @@ sudo apt install -y git make python3-colcon-common-extensions ros-jazzy-ros-base
   ros-jazzy-ros-gz-sim ros-jazzy-ros-gz-bridge ros-jazzy-xacro
 ```
 
-Para la visualización opcional en RViz, instala también `ros-jazzy-rviz2` y `ros-jazzy-joint-state-publisher-gui`. Para hacer gráficas, instala `python3-matplotlib`.
+For optional RViz visualization, install `ros-jazzy-rviz2` and `ros-jazzy-joint-state-publisher-gui`. To regenerate the plots, install `python3-matplotlib`.
 
-Si ya tienes el repositorio, abre una terminal en esta carpeta, donde están este README y los dos paquetes. Para clonar el proyecto por primera vez, ejecuta lo siguiente.
+If you already have the repository, open a terminal in the directory containing this README and the two ROS 2 packages. To clone it for the first time, run the following commands.
 
 ```bash
 git clone https://github.com/FernandoVB01/Project-01-Robots-G4.git
 cd Project-01-Robots-G4/Project-01-Robots-G4
 ```
 
-Ejecuta desde esa carpeta.
+Build and launch from that directory.
 
 ```bash
 source /opt/ros/jazzy/setup.bash
@@ -64,48 +64,48 @@ source install/setup.bash
 ros2 launch ackermann_challenger_control trajectory.launch.py
 ```
 
-Gazebo abre el escenario con la línea de referencia. El controlador espera la pose del simulador, deja 2 s de margen para el arranque y comienza a avanzar. Cuando imprime `completed`, detiene el robot. Los archivos se guardan en `resultados/tracking.csv` y `resultados/summary.json`. Cierra Gazebo o pulsa `Ctrl+C` antes de iniciar otra corrida.
+Gazebo opens the course and displays the reference line. The controller waits for the simulator pose, pauses for 2 seconds, and starts the lap. It stops the robot when it reports `completed`. It saves data to `results/tracking.csv` and `results/summary.json`. Close Gazebo or press `Ctrl+C` before starting another run.
 
-### Variantes
+### Launch options
 
 ```bash
-# Corrida sin interfaz
-ros2 launch ackermann_challenger_control trajectory.launch.py gui:=false output_dir:=resultados/headless
+# Run without the GUI
+ros2 launch ackermann_challenger_control trajectory.launch.py gui:=false output_dir:=results/headless
 
-# Modo gráfico con una espera de 8 s para empezar a grabar
-ros2 launch ackermann_challenger_control trajectory.launch.py start_delay:=8.0 output_dir:=resultados/video
+# Allow 8 seconds to start recording in the GUI
+ros2 launch ackermann_challenger_control trajectory.launch.py start_delay:=8.0 output_dir:=results/video
 
-# Mostrar el robot sin iniciar la trayectoria
+# Show the robot without starting a lap
 ros2 launch ackermann_challenger_description gazebo.launch.py
 
-# Inspección de articulaciones y modelo en RViz, con los paquetes opcionales instalados
+# Inspect the robot and its joints in RViz
 ros2 launch ackermann_challenger_description display.launch.py
 
-# Rehacer las gráficas tras terminar la corrida
-python3 tools/plot_results.py resultados/headless resultados/headless/figuras
+# Regenerate the plots after a run
+python3 tools/plot_results.py results/headless results/headless/figures
 ```
 
-| Argumento | Valor inicial | Función |
+| Argument | Default | Purpose |
 |---|---:|---|
-| `gui` | `true` | Ventana de Gazebo |
-| `drive` | `true` | Iniciar el seguidor |
-| `speed` | `0.55` | Velocidad nominal en m/s |
-| `lookahead` | `0.32` | Distancia de anticipación en m |
-| `start_delay` | `2.0` | Espera en segundos de simulación tras recibir la pose |
-| `output_dir` | `resultados` | Carpeta de telemetría |
+| `gui` | `true` | Open the Gazebo window |
+| `drive` | `true` | Start the path tracker |
+| `speed` | `0.55` | Nominal speed in m/s |
+| `lookahead` | `0.32` | Look-ahead distance in m |
+| `start_delay` | `2.0` | Delay in simulation seconds after the first valid pose |
+| `output_dir` | `results` | Telemetry output directory |
 
-Usa carpetas de salida distintas si quieres comparar corridas. Una corrida nueva reutiliza los nombres de archivo en la carpeta indicada.
+Use separate output directories to compare runs. A new run reuses the same file names in its output directory.
 
-Si la ventana de Gazebo tarda en dibujar el escenario, puedes separar la apertura de la ventana y el inicio del controlador. Primero ejecuta `ros2 launch ackermann_challenger_control trajectory.launch.py drive:=false`. Cuando se vea el circuito, abre otra terminal en la misma carpeta, carga los dos `setup.bash` y ejecuta lo siguiente.
+If Gazebo takes time to render the course, open the window first with `ros2 launch ackermann_challenger_control trajectory.launch.py drive:=false`. Once the course is visible, open a second terminal in the same directory, source both setup files, and start the tracker.
 
 ```bash
 ros2 run ackermann_challenger_control trajectory_tracker --ros-args \
-  -p use_sim_time:=true -p output_dir:=resultados/video
+  -p use_sim_time:=true -p output_dir:=results/video
 ```
 
-### Diagnóstico
+### Troubleshooting
 
-En una segunda terminal, carga los dos archivos `setup.bash` antes de ejecutar los comandos ROS 2.
+In a second terminal, source both setup files and check the ROS 2 topics.
 
 ```bash
 ros2 topic echo /clock --once
@@ -113,34 +113,34 @@ ros2 topic echo /challenger/ground_truth --once
 ros2 topic echo /challenger/cmd_vel --once
 ```
 
-Si falta `/clock`, confirma que Gazebo esté ejecutándose sin pausa. Si no aparece `/challenger/ground_truth`, revisa el mensaje de inserción de `challenger` y los mensajes del puente `ros_gz_bridge`. El nodo registra `off_course` o `timeout` si activa la detención por desvío o tiempo.
+If `/clock` is missing, check that Gazebo is running and unpaused. If `/challenger/ground_truth` is missing, check the message confirming that `challenger` spawned and the logs from `ros_gz_bridge`. The tracker reports `off_course` or `timeout` when either condition triggers a stop.
 
-## Diseño y funcionamiento
+## Design and operation
 
-| Parámetro | Valor |
+| Parameter | Value |
 |---|---:|
-| Distancia entre ejes | 300 mm |
-| Separación de centros de rodadura | 190 mm |
-| Separación de juntas de giro de rueda | 208 mm |
-| Separación de pivotes delanteros | 120 mm |
-| Diámetro y ancho de rueda | 70 mm y 26 mm |
-| Recorrido de cada mangueta | ±35° |
-| Lado del hexágono base | 2,55 m |
-| Radio de los seis arcos | 0,95 m |
-| Curvatura máxima de la referencia | 1,053 m⁻¹ |
-| Curvatura máxima comandada | 1,8 m⁻¹ |
+| Wheelbase | 300 mm |
+| Track width between tire centers | 190 mm |
+| Wheel spin joint spacing | 208 mm |
+| Front kingpin spacing | 120 mm |
+| Wheel diameter and width | 70 mm and 26 mm |
+| Steering range per knuckle | ±35° |
+| Nominal hexagon side length | 2.55 m |
+| Radius of the six arcs | 0.95 m |
+| Maximum reference curvature | 1.053 m⁻¹ |
+| Maximum commanded curvature | 1.8 m⁻¹ |
 
-Las mallas de Fusion conservan su geometría original. Los centros de los neumáticos están desplazados 9 mm hacia dentro con respecto a las juntas de giro. Las ruedas usan colisiones cilíndricas y el chasis una caja central. El paquete de descripción instala el escenario, el modelo y el puente de Gazebo.
+The model uses the original Fusion meshes for visualization. The tire centers are 9 mm inboard of the wheel spin joints. The wheels use cylindrical collision geometry, and the chassis uses a central box. The description package installs the world, the model, and the Gazebo bridge configuration.
 
-El seguidor proyecta la pose del punto medio del eje trasero sobre una ventana local de la referencia. Busca un objetivo adelantado, calcula la curvatura y publica la velocidad lineal y angular. El sistema Ackermann de Gazebo ajusta las manguetas delanteras con ganancia proporcional de 8,0 s⁻¹ y las velocidades de las dos ruedas traseras. La pose de referencia del simulador proporciona la realimentación y la medición.
+The tracker projects the rear-axle midpoint onto a local segment of the reference. It selects a target ahead, computes curvature, and publishes linear and angular velocity commands. The Gazebo Ackermann system controls the front steering knuckles with a proportional gain of 8.0 s⁻¹ and sets the two rear wheel speeds. The simulator pose provides both feedback and the tracking measurements.
 
-La vuelta empieza en el punto medio de la primera recta. Los arcos giran 60° y son tangentes a las rectas contiguas. La curvatura de referencia es 0 en recta y 1/0,95 m⁻¹ en los arcos.
+The lap begins at the midpoint of the first straight. Each arc turns 60° and meets the adjoining straight sections tangentially. The reference curvature is zero on the straights and 1/0.95 m⁻¹ on the arcs.
 
-Si cambias la curva en `geometry.py`, ejecuta `python3 tools/update_course.py` y recompila para actualizar la marca visible del escenario.
+If you change the course in `geometry.py`, run `python3 tools/update_course.py` and rebuild to update the visible course markings.
 
-## Entregables
+## Deliverables
 
-- [Archivo de Fusion 360](cad/fusion360/Ackermann_Challenger.f3d) y [planos de las piezas](cad/planos/Ackermann_Challenger%20Planos.pdf). Lámina 1, ensamblaje y lista de 9 piezas. Lámina 2, base. Láminas 3–4, manguetas. Lámina 5, geometría de las cuatro ruedas. Lámina 6, carrocería. Lámina 7, LiDAR.
-- [Informe IEEE en inglés (PDF)](docs/IEEE_AckermannG4.pdf).
-- [Presentación de 10 diapositivas (PowerPoint)](docs/presentacion/Ackermann_G4.pptx).
-- [Video, gráficas y datos de la corrida](#evidencias-de-la-simulación).
+- [Fusion 360 archive](cad/fusion360/Ackermann_Challenger.f3d) and [dimensioned engineering drawings](cad/drawings/Ackermann_Challenger_Drawings.pdf). Sheet 1 covers the assembly and its nine parts. Sheet 2 shows the base chassis, sheets 3–4 the steering knuckles, sheet 5 the four wheels, sheet 6 the body, and sheet 7 the LiDAR.
+- [IEEE paper (PDF)](docs/IEEE_AckermannG4.pdf).
+- [10-slide presentation (PowerPoint)](docs/presentation/Ackermann_G4.pptx).
+- [Simulation video, plots, and data](#simulation-evidence).

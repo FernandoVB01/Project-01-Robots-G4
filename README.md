@@ -1,29 +1,29 @@
-# Ackermann Challenger · Grupo 4
+# Ackermann Challenger · Group 4
 
-## Resumen
+## Overview
 
-Robot móvil con dirección Ackermann, diseñado en Fusion 360 y simulado en Gazebo Harmonic con ROS 2 Jazzy. El controlador Pure Pursuit completó un circuito hexagonal redondeado de **14,69 m** con seis rectas y seis arcos circulares de 0,95 m de radio.
+An Ackermann-steered mobile robot designed in Fusion 360 and simulated in Gazebo Harmonic with ROS 2 Jazzy. The Pure Pursuit controller completed a **14.69 m rounded hexagon** with six straight sections and six circular arcs of radius 0.95 m.
 
-| Resultado de la corrida grabada | Valor |
+| Recorded run | Value |
 |---|---:|
-| Tiempo de simulación | 27,50 s |
-| Error RMS de seguimiento | 2,0 mm |
-| Error máximo de seguimiento | 5,6 mm |
-| Distancia a la meta al ordenar la parada | 6,60 cm |
+| Simulation time | 27.50 s |
+| RMS tracking error | 2.0 mm |
+| Maximum tracking error | 5.6 mm |
+| Distance to the endpoint at the stop command | 6.60 cm |
 
-## Video de la simulación
+## Simulation video
 
-[![Vista previa animada del Challenger recorriendo el circuito hexagonal en Gazebo. Abre el video completo.](Project-01-Robots-G4/docs/resultados/imagenes/gazebo-vista-previa.gif)](Project-01-Robots-G4/docs/resultados/gazebo_trayectoria.mp4)
+[![Animated preview of the Challenger following the rounded hexagon in Gazebo. Opens the full video.](Project-01-Robots-G4/docs/results/images/gazebo-preview.gif)](Project-01-Robots-G4/docs/results/gazebo-trajectory.mp4)
 
-La vista previa está acelerada. [Ver video completo en MP4](Project-01-Robots-G4/docs/resultados/gazebo_trayectoria.mp4)
+The preview plays at an accelerated speed. [Watch the full MP4](Project-01-Robots-G4/docs/results/gazebo-trajectory.mp4)
 
-## Evidencia de seguimiento
+## Tracking results
 
-![Gráfica de la trayectoria de referencia y la trayectoria registrada del eje trasero en Gazebo](Project-01-Robots-G4/docs/resultados/imagenes/trajectory.png)
+![Plot of the reference route and the measured rear-axle path in Gazebo](Project-01-Robots-G4/docs/results/images/trajectory.png)
 
-La gráfica superpone la referencia y el recorrido medido del eje trasero. [Ver captura de Gazebo, diseño CAD y gráfica de error](Project-01-Robots-G4/README.md#evidencias-de-la-simulación) · [Datos de la corrida](Project-01-Robots-G4/docs/resultados/tracking.csv)
+The plot overlays the reference route and the measured rear-axle path. [See the Gazebo screenshot, CAD model, and error plot](Project-01-Robots-G4/README.md#simulation-evidence) · [Recorded telemetry](Project-01-Robots-G4/docs/results/tracking.csv)
 
-## Ejecución y entregables
+## Setup and deliverables
 
-- [Dependencias, compilación y comandos de ROS 2](Project-01-Robots-G4/README.md#compilar-y-ejecutar)
-- [Planos, informe IEEE y diapositivas](Project-01-Robots-G4/README.md#entregables)
+- [Dependencies, build steps, and ROS 2 commands](Project-01-Robots-G4/README.md#build-and-run)
+- [Engineering drawings, IEEE paper, and presentation](Project-01-Robots-G4/README.md#deliverables)

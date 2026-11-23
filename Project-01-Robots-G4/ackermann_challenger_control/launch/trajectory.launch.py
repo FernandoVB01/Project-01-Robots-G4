@@ -18,7 +18,7 @@ def generate_launch_description():
         DeclareLaunchArgument('speed', default_value='0.55'),
         DeclareLaunchArgument('lookahead', default_value='0.32'),
         DeclareLaunchArgument('start_delay', default_value='2.0'),
-        DeclareLaunchArgument('output_dir', default_value='resultados'),
+        DeclareLaunchArgument('output_dir', default_value='results'),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(str(share / 'launch' / 'gazebo.launch.py')),
             launch_arguments={'gui': LaunchConfiguration('gui')}.items(),

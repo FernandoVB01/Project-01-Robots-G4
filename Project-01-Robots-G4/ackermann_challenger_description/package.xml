@@ -3,7 +3,7 @@
   <name>ackermann_challenger_description</name>
   <version>0.1.0</version>
   <description>Fusion 360 model and Gazebo Harmonic simulation of the Group 4 Ackermann Challenger.</description>
-  <maintainer email="FernandoVB01@users.noreply.github.com">Grupo 4</maintainer>
+  <maintainer email="FernandoVB01@users.noreply.github.com">Group 4</maintainer>
   <license>Unspecified</license>
   <buildtool_depend>ament_cmake</buildtool_depend>
   <exec_depend>ament_index_python</exec_depend>

@@ -21,7 +21,7 @@ class Tracker(Node):
         self.declare_parameter('speed', 0.55)
         self.declare_parameter('lookahead', 0.32)
         self.declare_parameter('start_delay', 2.0)
-        self.declare_parameter('output_dir', 'resultados')
+        self.declare_parameter('output_dir', 'results')
         self.speed = self.get_parameter('speed').value
         self.lookahead = self.get_parameter('lookahead').value
         self.start_delay = self.get_parameter('start_delay').value
