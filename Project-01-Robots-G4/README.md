@@ -142,5 +142,5 @@ Si cambias la curva en `geometry.py`, ejecuta `python3 tools/update_course.py` y
 
 - [Archivo de Fusion 360](cad/fusion360/Ackermann_Challenger.f3d) y [planos de las piezas](cad/planos/Ackermann_Challenger%20Planos.pdf). Lámina 1, ensamblaje y lista de 9 piezas. Lámina 2, base. Láminas 3–4, manguetas. Lámina 5, geometría de las cuatro ruedas. Lámina 6, carrocería. Lámina 7, LiDAR.
 - [Informe IEEE en inglés (PDF)](docs/IEEE_AckermannG4.pdf).
-- [Presentación de 10 diapositivas (PowerPoint)](docs/presentacion/Ackermann_G4.pptx) y [guion en inglés](docs/presentacion/guion.md).
+- [Presentación de 10 diapositivas (PowerPoint)](docs/presentacion/Ackermann_G4.pptx).
 - [Video, gráficas y datos de la corrida](#evidencias-de-la-simulación).
